@@ -1,24 +1,20 @@
-import{useEffect, useState} from 'react'
+import ListaProductos from './ListaProductos'
+import { createBrowserRouter, RouterProvider } from 'react-router'
+import MainLayout from './MainLayout'
 
-const App = () => {
-  const [productos, setProductos] = useState([])
-  const [cargando, setCargando] = useState(true)
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <MainLayout/>,
+    children:[
+      {index: true, element: <ListaProductos/>},
+      {path: '/nosotros', element: <h1>componente Nosotros</h1>},
+      {path: '*', element: <h1>404 No Encontrado</h1>}
+    ]
+  }
+])
 
-  useEffect(()=>{
-    fetch("/src/data/products.json")
-    .then(resultado => resultado.json())
-    .then(data => {
-      setProductos(data)
-      console.log("data",data)
-    })
-      console.log("productos",productos)
-  },[])
+const App = () => <RouterProvider router={router}/>
   
-  return (
-    <div className='max-w-md mx-auto mt-8 space-y-3'>
-        
-    </div>
-  )
-}
 
 export default App
