@@ -5,7 +5,7 @@ const ListaProductos = () => {
   const [cargando, setCargando] = useState(true)
 
   useEffect(()=>{
-    fetch("http://localhost:3001/producto")
+    fetch("http://localhost:3001/productos")
     .then(resultado => resultado.json())
     .then(data => {
       setProductos(data)
