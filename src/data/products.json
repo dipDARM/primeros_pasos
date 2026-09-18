@@ -1,12 +1,20 @@
-[
-    {
-        "id":1,
-        "nombre": "Pizza",
-        "precio": 20000
-    },
-    {
-        "id":2,
-        "nombre": "No-CocaCola",
-        "precio": 5000
-    }
-]
+{
+    "producto":[
+        {
+            "id":1,
+            "nombre": "pizza",
+            "precio": 7000
+        },
+        {
+            "id":2,
+            "nombre": "hamburguesa",
+            "precio": 10000
+        },
+        {
+            "id":3,
+            "nombre": "gaseosa",
+            "precio": 4000
+        }
+
+    ]
+}

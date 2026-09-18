@@ -5,7 +5,7 @@ const ListaProductos = () => {
   const [cargando, setCargando] = useState(true)
 
   useEffect(()=>{
-    fetch("/src/data/products.json")
+    fetch("http://localhost:3001/producto")
     .then(resultado => resultado.json())
     .then(data => {
       setProductos(data)
@@ -27,6 +27,10 @@ const ListaProductos = () => {
             <span className='text-indigo-600 font-semibold'>
               ${ producto.precio}
             </span>
+
+                <a href={`http://localhost:3001/productos/${producto.id}`} className="text-indigo-600 hover:text-indigo-800">
+            Editar
+          </a>
 
           </li>
         ))}
