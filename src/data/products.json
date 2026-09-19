@@ -1,19 +1,19 @@
 {
   "productos": [
     {
-      "id": "1",
-      "nombre": "pizza",
-      "precio": 7000
-    },
-    {
-      "id": "2",
-      "nombre": "hamburguesa",
-      "precio": 10000
-    },
-    {
       "id": "3",
       "nombre": "gaseosa",
       "precio": 4000
+    },
+    {
+      "nombre": "pizza",
+      "precio": "8000",
+      "id": "0gr9JX2PVLA"
+    },
+    {
+      "nombre": "hamburguesa",
+      "precio": "10000",
+      "id": "fqXQ3oD5VBk"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

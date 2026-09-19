@@ -2,6 +2,7 @@ import { useParams } from "react-router"
 import { useEffect, useState } from "react"
 
 
+
 const FromProductos = () => {
   const { id } = useParams()
   const [producto, setProducto] = useState(null)

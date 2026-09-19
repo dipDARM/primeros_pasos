@@ -27,17 +27,11 @@ const ListaProductos = () => {
             <span className='text-indigo-600 font-semibold'>
               ${producto.precio}
             </span>
-
-            <NavLink to={`/productos/${producto.id}`} className="text-indigo-600 hover:text-indigo-800">
-              Editar
-            </NavLink>
+            <button>Agregar</button>
           </div>
+      
         ))}
-        <div className='flex justify-center mt-4'>
-          <NavLink to="/productos/agregar" className="text-white bg-green-500 hover:bg-green-700 py-2 px-4 rounded-md">
-            Agregar
-          </NavLink>
-        </div>
+        
     </div>
   )
 }
