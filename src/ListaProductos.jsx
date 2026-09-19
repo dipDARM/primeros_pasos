@@ -1,4 +1,5 @@
 import{useEffect, useState} from 'react'
+import { NavLink } from 'react-router'
 
 const ListaProductos = () => {
   const [productos, setProductos] = useState([])
@@ -19,21 +20,24 @@ const ListaProductos = () => {
   return (
     <div className='max-w-md mx-auto mt-8 space-y-3'>
         {productos.map((producto) => (
-          <li key={producto.id}
-          className='flex justify-between items-center p-4 rounded-xl border border-gray shadow-sm hover:shadow-md transition'>
+          <div key={producto.id} className='flex justify-between items-center p-4 rounded-xl border border-gray shadow-sm hover:shadow-md transition'>
             <span className='font-medium text-gray-800'>
-              {producto.nombre} 
+              {producto.nombre}
             </span>
             <span className='text-indigo-600 font-semibold'>
-              ${ producto.precio}
+              ${producto.precio}
             </span>
 
-                <a href={`http://localhost:3001/productos/${producto.id}`} className="text-indigo-600 hover:text-indigo-800">
-            Editar
-          </a>
-
-          </li>
+            <NavLink to={`/productos/${producto.id}`} className="text-indigo-600 hover:text-indigo-800">
+              Editar
+            </NavLink>
+          </div>
         ))}
+        <div className='flex justify-center mt-4'>
+          <NavLink to="/productos/agregar" className="text-white bg-green-500 hover:bg-green-700 py-2 px-4 rounded-md">
+            Agregar
+          </NavLink>
+        </div>
     </div>
   )
 }
